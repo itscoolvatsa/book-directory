@@ -4,11 +4,10 @@ import fs from "fs";
 const router = express();
 
 router.get("/", (req: Request, res: Response) => {
-    fs.readFile("./data.json", "utf-8", (err, data) => {
+    fs.readFile("./src/data/data.json", "utf-8", (err, data) => {
         if (err) {
             console.log(err);
-            res.send({});
-            return;
+            return res.status(500).send({});
         }
         const result = JSON.parse(data);
         console.log(result);

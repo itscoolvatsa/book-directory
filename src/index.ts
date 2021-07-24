@@ -3,6 +3,7 @@ import { GetBooks } from "./routes/getbooks";
 import { AddBooks } from "./routes/addBooks";
 
 const app = express();
+app.use(express.json());
 
 app.use(GetBooks);
 app.use(AddBooks);
