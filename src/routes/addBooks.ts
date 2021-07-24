@@ -4,7 +4,7 @@ const books = require("../data/data.json");
 
 const router = express();
 
-router.post("/", (req: Request, res: Response) => {
+router.put("/", (req: Request, res: Response) => {
     // Getting data from body
     const data = req.body;
     // Pushing the data recieved from the body

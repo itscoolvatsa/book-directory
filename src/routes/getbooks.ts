@@ -10,7 +10,6 @@ router.get("/", (req: Request, res: Response) => {
             return res.status(500).send({});
         }
         const result = JSON.parse(data);
-        console.log(result);
         res.send(result);
     });
 });
